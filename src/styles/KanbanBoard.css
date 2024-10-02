@@ -1,0 +1,216 @@
+/* Options panel */
+.options-panel {
+    display: flex;
+    justify-content: flex-start; /* Align the display button to the left */
+    margin-bottom: 1em;
+  }
+  
+  .display-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .grouping-options label,
+  .sorting-options label {
+    margin-right: 10px;
+  }
+  
+  .kanban-board {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .kanban-column {
+    width: 30%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .kanban-ticket {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative; /* Added to position the image */
+  }
+  
+  .ticket-icon {
+    position: absolute; /* Position relative to the parent (kanban-ticket) */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 30px; /* Set appropriate size */
+    height: 30px; /* Set appropriate size */
+  }
+  
+  .feature-request {
+    display: flex;
+    align-items: center; /* Aligns circle and text vertically */
+    margin-top: 10px; /* Space above the feature request */
+  }
+  
+  .solid-circle {
+    display: inline-block;
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes it a circle */
+    background-color: grey; /* Color of the circle */
+    margin-right: 5px; /* Space between circle and text */
+  }
+  
+  .kanban-ticket {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .kanban-column {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+  }
+  
+  .done-indicator {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Add this to KanbanBoard.css */
+  .solid-blue-tick {
+    width: 16px;
+    height: 16px;
+    background-color: blue; /* Solid blue color */
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-right: 5px; /* Space between circle and text */
+    
+    /* White tick mark inside the circle */
+  }
+  
+  .solid-blue-tick::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .hollow-gray-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  /* Style for the hollow orange circle */
+  .hollow-orange-circle {
+    width: 15px; /* Adjust size as needed */
+    height: 15px; /* Adjust size as needed */
+    border: 2px solid orange;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative; /* Positioning context for the half circle */
+    margin-right: 5px; /* Space between the circle and the title */
+  }
+  
+  /* Style for the solid orange half circle */
+  .half-circle {
+    width: 10px; /* Same size as the outer circle */
+    height: 20px; /* Same size as the outer circle */
+    background-color: orange;
+    border-radius: 0 0 50% 0;
+    clip-path: inset(0 0 50% 0); /* This will create a half circle */
+    position: absolute; /* Position inside the hollow circle */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the left */
+    transform: translateY(0); /* Adjust for negligible distance */
+  }
+  
+  .solid-gray-circle {
+    width: 20px;
+    height: 20px;
+    background-color: gray; /* Solid gray color */
+    border-radius: 50%; /* Make it circular */
+    display: inline-flex; /* Use flex to center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .cross {
+    position: relative;
+    width: 10px; /* Width of the cross lines */
+    height: 10px; /* Height of the cross lines */
+  }
+  
+  .cross::before,
+  .cross::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px; /* Width of the cross lines */
+    height: 10px; /* Height of the cross lines */
+    background: white; /* White color for the "X" */
+    transform: translate(-50%, -50%); /* Center the lines */
+  }
+  
+  .cross::before {
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotate to form the cross */
+  }
+  
+  .cross::after {
+    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate to form the cross */
+  }
+  
+  .header-icons {
+    margin-left: auto; /* Push the icons to the extreme right */
+    color: gray; /* Gray color for the "+" and "..." */
+    display: flex; /* Ensure items are aligned */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .header-icons .plus-symbol {
+    margin-right: 5px;      /* Add space between + and ... */
+    font-size: 16px;        /* Adjust size as needed */
+  }
+  
+  .header-icons .ellipsis {
+    font-size: 14px;        /* Adjust size as needed */
+    margin-top: -4px;        /* Move ... upwards */
+  }
+  .urgent-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .priority-label {
+    display: flex;
+    align-items: center;
+  }
+  
+  

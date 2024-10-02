@@ -1,0 +1,71 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.column {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ticket {
+  background-color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.ticket-status {
+  background-color: #eee;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.ticket-priority {
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.ticket-priority.Low {
+  background-color: #d4edda;
+}
+
+.ticket-priority.Medium {
+  background-color: #ffeeba;
+}
+
+.ticket-priority.High {
+  background-color: #f8d7da;
+}
